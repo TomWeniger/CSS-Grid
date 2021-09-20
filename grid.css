@@ -1,0 +1,72 @@
+.grid-container {   
+    height:300px;
+    width: 50px;
+    display:grid;
+    grid-template-columns: repeat(1, minmax(50px, 1fr));
+    
+    grid-template-areas: 
+    "h h h"
+    "a a a"
+    "c c c";
+    
+}
+
+.child1 {
+    grid-area: h;
+    background-color:black;
+    color: white;
+    
+   
+   
+}
+
+.child2 {
+    grid-area: a;
+    background-color: green;
+    color: black;
+  
+    
+}
+
+.child3 {
+    grid-area: c;
+    background-color: orange;
+    color: black:
+  
+
+}
+
+
+@media only screen and (min-width: 700px) {
+    .grid-container {   
+        height:300px;
+        width: 650px;
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        
+        grid-template-areas: 
+        "h a a"
+        "m c c"
+        "m c c";
+        
+    }
+
+    .child1 {
+        grid-area: h;
+    }
+    
+    .child2 {
+        grid-area: a;
+    }
+    
+    .child3 {
+        grid-area: c;
+    }
+
+    .child4 {
+        grid-area: m;
+        background-color:brown;
+    }
+    
+}
