@@ -1,38 +1,83 @@
 .grid-container {   
     height:300px;
-    width: 50px;
+    width: 100px;
     display:grid;
-    grid-template-columns: repeat(1, minmax(50px, 1fr));
-    
+    grid-template-rows: repeat(2, 40px) auto auto repeat(3, 40px);
+   
     grid-template-areas: 
-    "h h h"
-    "a a a"
-    "c c c";
+    "Header"
+    "Menu"
+    "Hero"
+    "Main"
+    "Banner"
+    "Extra"
+    "Image";
     
 }
 
 .child1 {
-    grid-area: h;
+    grid-area: Header;
     background-color:black;
     color: white;
-    
+    display:flex;
+    justify-content:center;
+  
    
    
 }
 
 .child2 {
-    grid-area: a;
-    background-color: green;
-    color: black;
-  
+    grid-area: Menu;
+    background-color: rgb(128, 0, 21);
+    color: #fff;
+    display:flex;
+    justify-content:center;
     
 }
 
 .child3 {
-    grid-area: c;
-    background-color: orange;
-    color: black:
-  
+    grid-area: Hero;
+    background-color: blue;
+    color: white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.child4 {
+    grid-area: Main;
+    background-color: rgb(4, 4, 34);
+    color: white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.child5 {
+    grid-area: Banner;
+    background-color: rgb(255, 251, 0);
+    color: black;
+    display:flex;
+    justify-content:center;
+
+}
+
+.child6 {
+    grid-area: Extra;
+    background-color: rgb(21, 255, 0);
+    color: black;
+    display:flex;
+    justify-content:center;
+
+}
+
+.child7 {
+    grid-area: Image;
+    background-color: grey;
+    color: black;
+    display:flex;
+    justify-content:center;
 
 }
 
@@ -40,33 +85,96 @@
 @media only screen and (min-width: 700px) {
     .grid-container {   
         height:300px;
-        width: 650px;
+        width: 800px;
         display:grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        
+        grid-template-columns: repeat(4, 70px);
+        grid-template-rows: repeat(14, 1fr);
+        justify-content: center;
         grid-template-areas: 
-        "h a a"
-        "m c c"
-        "m c c";
+        "Header Header Header Header"
+        "Hero Hero Hero Hero"
+        "Hero Hero Hero Hero"
+        "Hero Hero Hero Hero"
+        "Hero Hero Hero Hero"
+        "Menu Main Main Main "
+        "Menu Main Main Main"
+        "Menu Main Main Main"
+        "Menu Main Main Main"
+        "Menu Main Main Main"
+        "Menu Banner Banner Banner"
+        "Menu Banner Banner Banner"
+        "Menu Extra Extra Extra"
+        "Menu Image Image Image";
+        
+         
         
     }
 
     .child1 {
-        grid-area: h;
+        grid-area: Header;
+        background-color:black;
+        color: white;
+        display:flex;
+        justify-content:center;
+      
+       
+       
     }
     
     .child2 {
-        grid-area: a;
+        grid-area: Menu;
+        background-color: rgb(128, 0, 21);
+        color: #fff;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        
     }
     
     .child3 {
-        grid-area: c;
-    }
-
-    .child4 {
-        grid-area: m;
-        background-color:brown;
+        grid-area: Hero;
+        background-color: blue;
+        color: white;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    
     }
     
+    .child4 {
+        grid-area: Main;
+        background-color: rgb(4, 4, 34);
+        color: white;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    
+    .child5 {
+        grid-area: Banner;
+        background-color: rgb(255, 251, 0);
+        color: black;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    
+    }
+    
+    .child6 {
+        grid-area: Extra;
+        background-color: rgb(21, 255, 0);
+        color: black;
+        display:flex;
+        justify-content:center;
+    
+    }
+    
+    .child7 {
+        grid-area: Image;
+        background-color: grey;
+        color: black;
+        display:flex;
+        justify-content:center;
+    
+    }
 }
